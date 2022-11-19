@@ -1,4 +1,4 @@
-FROM python:3.8.3-alpine
+FROM python:3.8.3
 ENV PYTHONUNBUFFERED 1
 
 # app 디렉토리 내부에서 작업
