@@ -19,5 +19,3 @@ RUN pip wheel --no-cache-dir --no-deps --wheel-dir /app/wheels -r requirements.t
 
 # Now copy in our code, and run it
 COPY . /app/
-EXPOSE 5050
-CMD ["python", "manage.py", "runserver"]
