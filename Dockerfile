@@ -1,4 +1,4 @@
-FROM python:3.8.3
+FROM python:3.8.3-alpine
 ENV PYTHONUNBUFFERED 1
 
 # app 디렉토리 내부에서 작업
@@ -14,7 +14,7 @@ RUN apk update && apk add python3 python3-dev mariadb-dev build-base && pip3 ins
 # our installed requirements rather than reinstall them on every build
 COPY requirements.txt /app/requirements.txt
 RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+RUN pip wheel --no-cache-dir --no-deps --wheel-dir /app/wheels -r requirements.txt
 
 # Now copy in our code, and run it
 COPY . /app/
