@@ -186,9 +186,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# 로그 메세지에 날짜를 포함시키기 위해서 사전에 선언
-now = datetime.now()
-str_now = now.strftime('%y-%m-%d')
 
 LOGGING = {
     'version': 1,
