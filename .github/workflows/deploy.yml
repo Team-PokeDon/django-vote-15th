@@ -38,14 +38,14 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: ${{ steps.docker_meta.outputs.tags }}
-
-      - name: create remote directory
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          username: ubuntu
-          key: ${{ secrets.KEY }}
-          script: mkdir -p /home/ubuntu/srv/django-vote
+#
+#      - name: create remote directory
+#        uses: appleboy/ssh-action@master
+#        with:
+#          host: ${{ secrets.HOST }}
+#          username: ubuntu
+#          key: ${{ secrets.KEY }}
+#          script: mkdir -p /home/ubuntu/srv/django-vote
 
   #    - name: copy source via ssh key
   #      uses: burnett01/rsync-deployments@4.1
